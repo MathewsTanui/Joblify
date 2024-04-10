@@ -17,3 +17,8 @@ header {
 h1 {
     margin: 0;
 }
+
+/* Main content area styling */
+main {
+    padding: 20px;
+}
