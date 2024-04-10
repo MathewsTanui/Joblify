@@ -22,3 +22,8 @@ h1 {
 main {
     padding: 20px;
 }
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+}
