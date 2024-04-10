@@ -12,3 +12,8 @@ header {
     padding: 20px;
     text-align: center;
 }
+
+/* Heading styling */
+h1 {
+    margin: 0;
+}
