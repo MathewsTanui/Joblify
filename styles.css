@@ -51,3 +51,8 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 }
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
