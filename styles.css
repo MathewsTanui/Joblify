@@ -27,3 +27,9 @@ main {
 form {
     margin-bottom: 20px;
 }
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
