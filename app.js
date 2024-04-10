@@ -28,3 +28,25 @@ form.addEventListener('submit', async function(event) {
         console.error('Error fetching job listings:', error);
     }
 });
+
+// Function to render job listings on the page
+function renderJobListings(jobs) {
+    // Clear existing job listings
+    jobListings.innerHTML = '';
+
+    // Loop through each job listing and create HTML elements to display them
+    jobs.forEach(job => {
+        const listing = document.createElement('li');
+        listing.classList.add('job-listing');
+        listing.innerHTML = `
+            <h2>${job.jobTitle}</h2>
+            <p><strong>Company:</strong> ${job.companyName}</p>
+            <p><strong>Industry:</strong> ${job.jobIndustry}</p>
+            <p><strong>Type:</strong> ${job.jobType}</p>
+            <p><strong>Location:</strong> ${job.jobGeo}</p>
+            <p><strong>Description:</strong> ${job.jobExcerpt}</p>
+            <a href="${job.url}" target="_blank">Learn More</a>
+        `;
+        jobListings.appendChild(listing);
+    });
+}
