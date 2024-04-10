@@ -15,11 +15,13 @@ form.addEventListener('submit', async function(event) {
     const queryParams = new URLSearchParams(formData).toString();
 
     try {
-        // Fetch job listings from API using query parameters
-        const response = await fetch(`https://jobicy.com/api/v2/remote-jobs?${queryParams}`);
+        // Fetch job listings from API
+        const response = await fetch('https://jobicy.com/api/v2/remote-jobs', {
+            method: 'GET' // Specify the GET method
+        });
 
-         // Check if the response is successful
-         if (!response.ok) {
+        // Check if the response is successful
+        if (!response.ok) {
             throw new Error(`Failed to fetch job listings: ${response.status}`);
         }
         
