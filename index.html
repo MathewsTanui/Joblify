@@ -10,22 +10,26 @@
     <header>
         <h1>Joblify - Your Remote Job Search Engine</h1> <!-- Heading of the webpage -->
     </header>
-      <!-- Job filter form -->
-      <form id="job-filter-form">
-        <!-- Input field for specifying the number of jobs to display -->
-        <label for="count">Number of Jobs:</label>
-        <input type="number" id="count" name="count" value="10" min="1" max="50">
-        <!-- Input field for specifying the location of the jobs -->
-        <label for="geo">Location:</label>
-        <input type="text" id="geo" name="geo" placeholder="Enter location">
-        <!-- Input field for specifying the industry of the jobs -->
-        <label for="industry">Industry:</label>
-        <input type="text" id="industry" name="industry" placeholder="Enter industry">
-        <!-- Input field for specifying a keyword related to the jobs -->
-        <label for="tag">Keyword:</label>
-        <input type="text" id="tag" name="tag" placeholder="Enter keyword">
-        <!-- Button to submit the form and fetch job listings -->
-        <button type="submit">Search</button>
-    </form>
+        <main>
+            <!-- Job filter form -->
+            <form id="job-filter-form">
+                <!-- Input field for specifying the number of jobs to display -->
+                <label for="count">Number of Jobs:</label>
+                <input type="number" id="count" name="count" value="10" min="1" max="50">
+                <!-- Input field for specifying the location of the jobs -->
+                <label for="geo">Location:</label>
+                <input type="text" id="geo" name="geo" placeholder="Enter location">
+                <!-- Input field for specifying the industry of the jobs -->
+                <label for="industry">Industry:</label>
+                <input type="text" id="industry" name="industry" placeholder="Enter industry">
+                <!-- Input field for specifying a keyword related to the jobs -->
+                <label for="tag">Keyword:</label>
+                <input type="text" id="tag" name="tag" placeholder="Enter keyword">
+                <!-- Button to submit the form and fetch job listings -->
+                <button type="submit">Search</button>
+            </form>
+            <!-- Container for displaying job listings -->
+            <ul id="job-listings"></ul>
+        </main>
 </body>
 </html>
