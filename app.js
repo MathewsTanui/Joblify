@@ -16,7 +16,7 @@ form.addEventListener('submit', async function(event) {
 
     try {
         // Fetch job listings from API
-        const response = await fetch('https://jobicy.com/api/v2/remote-jobs', {
+        const response = await fetch(`https://jobicy.com/api/v2/remote-jobs?${queryParams}`, {
             method: 'GET' // Specify the GET method
         });
 
@@ -40,6 +40,14 @@ form.addEventListener('submit', async function(event) {
 function renderJobListings(jobs) {
     // Clear existing job listings
     jobListings.innerHTML = '';
+
+    // Check if there are any jobs
+    if (jobs.length === 0) {
+        const noJobsMessage = document.createElement('p');
+        noJobsMessage.textContent = 'No job listings found.';
+        jobListings.appendChild(noJobsMessage);
+        return; // Exit the function early
+    }
 
     // Loop through each job listing and create HTML elements to display them
     jobs.forEach(job => {
