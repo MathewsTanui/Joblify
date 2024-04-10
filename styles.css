@@ -33,3 +33,12 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+
+/* Input field styling */
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
