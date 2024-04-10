@@ -74,3 +74,8 @@ button:hover {
 .job-listing h2 {
     margin: 0;
 }
+
+/* Job description styling */
+.job-listing p {
+    margin: 5px 0;
+}
