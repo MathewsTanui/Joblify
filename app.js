@@ -15,9 +15,14 @@ form.addEventListener('submit', async function(event) {
     const queryParams = new URLSearchParams(formData).toString();
 
     try {
-        // Fetch job listings from API
-        const response = await fetch(`https://jobicy.com/api/v2/remote-jobs?${queryParams}`, {
-            method: 'GET' // Specify the GET method
+        // Allow cross origin requests
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const apiUrl = 'https://jobicy.com/api/v2/remote-jobs?tag=javascript';
+
+        // Fetch job listings from the API using a proxy
+        const response = await fetch(`${proxyUrl}${apiUrl}`, {
+            method: "GET",
+            mode: "cors",
         });
 
         // Check if the response is successful
@@ -65,3 +70,4 @@ function renderJobListings(jobs) {
         jobListings.appendChild(listing);
     });
 }
+
